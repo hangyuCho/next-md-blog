@@ -1,8 +1,9 @@
 import * as React from "react"
 import Image from "next/image"
 import { useMDXComponent } from "next-contentlayer/hooks"
+import type { MDXComponents } from 'mdx/types'
 
-const components = {
+const components: MDXComponents = {
   h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h1 
       className={
@@ -182,7 +183,7 @@ const components = {
       {...props}
       />
   ),
-  Image,
+  //Image,
 
 }
 
