@@ -4,6 +4,8 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings"
 import rehypePrettyCode from "rehype-pretty-code"
 import rehypeSlug from "rehype-slug"
 import remarkGfm from "remark-gfm"
+import remarkMdxImages from 'remark-mdx-images'
+import { BuildOptions } from 'typescript'
  
 const computedFields: ComputedFields = {
   slug: {
@@ -32,7 +34,14 @@ export default makeSource({
   contentDirPath: 'app/content', 
   documentTypes: [Doc],
   mdx: {
-    remarkPlugins: [remarkGfm],
+    remarkPlugins: [remarkGfm, remarkMdxImages],
+    esbuildOptions: (options: any) => {
+      options.loader = {
+        ...options.loader,
+        ".png": "dataurl",
+      };
+      return options
+    },
     rehypePlugins: [
       rehypeSlug,
       [
@@ -61,6 +70,6 @@ export default makeSource({
           }
         }
       ]
-    ]
+    ],
   }
 })
