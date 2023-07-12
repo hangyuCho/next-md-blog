@@ -7,7 +7,7 @@ const components: MDXComponents = {
   h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h1 
       className={
-        ` 
+        `text-4xl 
         ${className? className : ""}`
       }
       {...props}
@@ -16,7 +16,7 @@ const components: MDXComponents = {
   h2: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h2 
       className={
-        ` 
+        `text-3xl 
         ${className? className : ""}`
       }
       {...props}
@@ -25,7 +25,7 @@ const components: MDXComponents = {
   h3: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h3 
       className={
-        ` 
+        `text-2xl
         ${className? className : ""}`
       }
       {...props}
@@ -34,7 +34,7 @@ const components: MDXComponents = {
   h4: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h4 
       className={
-        ` 
+        `text-xl
         ${className? className : ""}`
       }
       {...props}
@@ -43,7 +43,7 @@ const components: MDXComponents = {
   h5: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h5 
       className={
-        ` 
+        `text-lg
         ${className? className : ""}`
       }
       {...props}
@@ -52,7 +52,7 @@ const components: MDXComponents = {
   h6: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h6 
       className={
-        ` 
+        `text-base
         ${className? className : ""}`
       }
       {...props}
@@ -61,7 +61,7 @@ const components: MDXComponents = {
   a: ({ className, ...props }: React.AnchorHTMLAttributes<HTMLAnchorElement>) => (
     <a 
       className={
-        ` 
+        `text-indigo-500
         ${className? className : ""}`
       }
       {...props}
@@ -70,7 +70,7 @@ const components: MDXComponents = {
   p: ({ className, ...props }: React.HTMLAttributes<HTMLParagraphElement>) => (
     <p 
       className={
-        ` 
+        `text-sm
         ${className? className : ""}`
       }
       {...props}
@@ -79,7 +79,7 @@ const components: MDXComponents = {
   ul: ({ className, ...props }: React.HTMLAttributes<HTMLUListElement>) => (
     <ul 
       className={
-        ` 
+        `list-disc list-inside pl-4
         ${className? className : ""}`
       }
       {...props}
@@ -88,7 +88,7 @@ const components: MDXComponents = {
   ol: ({ className, ...props }: React.HTMLAttributes<HTMLOListElement>) => (
     <ol 
       className={
-        ` 
+        `list-decimal list-inside pl-4
         ${className? className : ""}`
       }
       {...props}
@@ -97,7 +97,7 @@ const components: MDXComponents = {
   li: ({ className, ...props }: React.HTMLAttributes<HTMLLIElement>) => (
     <li 
       className={
-        ` 
+        `
         ${className? className : ""}`
       }
       {...props}
@@ -106,7 +106,8 @@ const components: MDXComponents = {
   blockquote: ({ className, ...props }: React.BlockquoteHTMLAttributes<HTMLQuoteElement>) => (
     <blockquote 
       className={
-        ` 
+        `before:content-['”'] before:block before:text-4xl
+         after:content-['”'] after:block after:text-4xl
         ${className? className : ""}`
       }
       {...props}
