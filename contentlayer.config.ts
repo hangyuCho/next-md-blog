@@ -5,7 +5,6 @@ import rehypePrettyCode from "rehype-pretty-code"
 import rehypeSlug from "rehype-slug"
 import remarkGfm from "remark-gfm"
 import remarkMdxImages from 'remark-mdx-images'
-import { BuildOptions } from 'typescript'
  
 const computedFields: ComputedFields = {
   slug: {
@@ -25,13 +24,15 @@ export const Doc = defineDocumentType(() => ({
   fields: {
     title: { type: 'string', required: true },
     description: { type: 'string' },
+    bg: {type: 'string', required : true },
     published: { type: 'boolean', default: true },
+    createdAt: { type: 'date' },
   },
   computedFields,
 }))
 
 export default makeSource({ 
-  contentDirPath: 'app/content', 
+  contentDirPath: 'public/content', 
   documentTypes: [Doc],
   mdx: {
     remarkPlugins: [remarkGfm, remarkMdxImages],

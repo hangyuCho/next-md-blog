@@ -1,5 +1,4 @@
 import * as React from "react"
-import Image from "next/image"
 import { useMDXComponent } from "next-contentlayer/hooks"
 import type { MDXComponents } from 'mdx/types'
 
@@ -195,7 +194,7 @@ interface MdxProps {
 const Mdx = ({ code }: MdxProps) => {
   const Component = useMDXComponent(code)
   return (
-    <div>
+    <div className="px-2 bg-white">
       <Component components={components} />
     </div>
   )

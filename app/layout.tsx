@@ -2,10 +2,10 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+//const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Mdx Blog',
+  title: 'h9 blog',
   description: 'for memo',
 }
 
@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} justify-center flex`}>{children}</body>
+      <body className={`justify-center flex h-screen overflow-auto bg-indigo-100`}>{children}</body>
     </html>
   )
 }
