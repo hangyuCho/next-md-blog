@@ -34,21 +34,26 @@ function DocCard(doc: Doc) {
 }
 
 export default function Home() {
-  const docs = allDocs.sort((a: any, b: any) => compareDesc(new Date(a.date), new Date(b.date)))
+  const docs = allDocs
 
   return (
     <div className="bg-white w-[24rem] flex flex-col gap-4">
       <div className="relative h-screen">
         <div>
-          <Image className="object-cover h-screen" src={Cover.src} alt="" priority={false} loading="lazy" sizes="384px" fill quality={50} />
+          <Image className="object-cover h-screen opacity-90" src={Cover.src} alt="" priority={false} loading="lazy" sizes="384px" fill quality={50} />
         </div>
-        <h1 className="text-center text-2xl font-black absolute top-0 w-full pt-12">
-            <div className="flex justify-center">
-              <div className="w-2/3 border-2 border-indigo-200 px-1 py-2 rounded-md text-indigo-200">
-                <p>Let&apos;s Enjoy</p>
+        <div className="font-['SUITE-Regular'] text-center text-2xl font-black absolute top-0 w-full pt-12 z-10">
+            <div className="flex flex-col justify-center items-center">
+              <div className="relative flex justify-center items-center w-32 border-2 border-indigo-200 px-4 py-1 rounded-lg text-indigo-200 text-base after:content-['▼'] after:absolute after:bottom-[-0.9rem] after:text-xs">
+                <p>Let&apos;s enjoy</p>
+              </div>
+              <div className="mt-10 text-white text-lg">
+                <p>작고 간단하지만 기능성이 있는 것을 만들고 있습니다</p>
+                
+                <p>이 작은 것들을 조금씩 합쳐가면서 좋은 것을 만들어 보고 싶습니다</p>
               </div>
             </div>
-        </h1>
+        </div>
       </div>
       <div className="bg-white">
         {docs.filter((doc: Doc) => doc.published).map((doc: Doc, i: number) => (
