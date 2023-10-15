@@ -45,7 +45,7 @@ export default function Home() {
         <h1 className="text-center text-2xl font-black absolute top-0 w-full pt-12">
             <div className="flex justify-center">
               <div className="w-2/3 border-2 border-indigo-200 px-1 py-2 rounded-md text-indigo-200">
-                <p>Let's Enjoy</p>
+                <p>Let&apos;s Enjoy</p>
               </div>
             </div>
         </h1>
