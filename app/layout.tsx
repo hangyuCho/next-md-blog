@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`justify-center flex h-screen overflow-auto bg-indigo-100`}>{children}</body>
+      <body className={`justify-center flex overflow-auto bg-indigo-100`}>{children}</body>
     </html>
   )
 }

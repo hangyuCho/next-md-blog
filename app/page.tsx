@@ -38,12 +38,19 @@ export default function Home() {
 
   return (
     <div className="bg-white w-[24rem] flex flex-col gap-4">
-      <Image className="relative w-screen object-cover m-0 h-42 c-cover" src={Cover.src} alt="" sizes="100vw" width={0} height={0} />
-      <h1 className="mb-8 text-center text-2xl font-black border">
-          INFO
-      </h1>
-      
-      <div>
+      <div className="relative h-screen">
+        <div>
+          <Image className="object-cover h-screen" src={Cover.src} alt="" priority={false} loading="lazy" sizes="384px" fill quality={50} />
+        </div>
+        <h1 className="text-center text-2xl font-black absolute top-0 w-full pt-12">
+            <div className="flex justify-center">
+              <div className="w-2/3 border-2 border-indigo-200 px-1 py-2 rounded-md text-indigo-200">
+                <p>Let's Enjoy</p>
+              </div>
+            </div>
+        </h1>
+      </div>
+      <div className="bg-white">
         {docs.filter((doc: Doc) => doc.published).map((doc: Doc, i: number) => (
           <DocCard key={i} {...doc} />
         ))}
