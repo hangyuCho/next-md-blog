@@ -22,7 +22,7 @@ function DocCard(doc: Doc) {
             { doc.createdAt ? <span className="text-xs text-gray-600">|</span> : null}
             <time dateTime={doc.body.code} className="block text-xs text-gray-600">
               {doc.createdAt ? format(parseISO(doc.createdAt), 'yyyy. MM. d') : null}
-            </time>
+            </time> 
           </div>
         </div>
         <div className="flex items-center justify-center w-1/4">
